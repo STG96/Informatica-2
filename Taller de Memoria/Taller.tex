@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,CO]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{cite}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \Huge
+        \textbf{Memoria Electrónica}
+        
+        \vspace{0.5cm}
+        \LARGE
+        Taller
+            
+        \vspace{1.5cm}
+            
+        \textbf{Santiago Tangarife Guerra}
+            
+        \vfill
+            
+        \vspace{0.8cm}
+            
+        \Large
+        Despartamento de Ingeniería Electrónica y Telecomunicaciones\\
+        Universidad de Antioquia\\
+        Medellín\\
+        Septiembre de 2020
+            
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\section{Sección introductoria}
+El siguiente trabajo trata sobre los diferentes tipos de memoria que tiene un computador; explicando los diferentes tipos de memoria existentes y resaltando su importancia en la operatividad de cualquier tipo de computador.
+\section{Sección de contenido} \label{contenido}
+    \begin{center}
+    \LARGE
+        Memoria Electrónica
+    \end{center}
+    
+La memoria es un dispositivo electrónico o hardware cuya función es almacenar temporalmente datos en forma de bits (unidad mínima de información) e/o instrucciones con el fin de transportarl@s para su procesamiento en el procesador o para guardarlos definitivamente en el disco duro(que es también un tipo de memoria que es más lenta pero con mayor capacidad de todas).
+
+    \vspace{1cm}
+        \begin{align}
+        
+        \LARGE
+        Tipos de memoria:
+        
+        \end{align}
+los tipos memorias en un computador se clasifican según la capacidad y velocidad de cada una, algo que llama la atención es que se cumple al menos en la mayoría de los casos que la relación entre capacidad y velocidad en las memorias es inversamente proporcional. A continuación describo los tipos de memoria conocidos por mí:
+
+    \vspace{0.5cm}
+Disco duro: Este dispositivo es el que más capacidad tiene, pero el más lento para gestionar la información, también consta de un dispositivo en forma rectangular que contiene adentro un disco giratorio en el que se almacena la información, esta es leída y escrita por un cabezal, este mecanismo mecánico es el que limita su velocidad ya que depende de la rapidez de rotación del disco.
+
+    \vspace{0.5cm}
+Memoria virtual: Este tipo de memoria se encuentra dentro del disco duro y su función es servir de soporte para la memoria RAM; ya que recibe la información que se necesita, pero no es prioritaria en el momento, logrando asi que la memoria RAM tenga más espacio momentáneamente para mejorar la eficiencia del equipo.
+
+    \vspace{0.5cm}
+Memoria RAM: Este tipo de memoria es un hardware en forma de tarjeta rectangular que se conecta a la placa base, cuya función es esencial para el funcionamiento de un computador; ya que provee de espacio de rápido y fácil acceso para el procesador. Funciona guardando información en sus celdas de forma temporal y que se puede transmitir de forma rápida ya que al estar conectada directamente a la placa madre, la transmisión de pulsos (información) se hace de forma directa.
+
+    \vspace{0.5cm}
+Memoria caché l1, l2 y l3: Este tipo de memoria es un hardware que se encuentra cerca o dentro de los microprocesadores; esto con el fin de tener muy rápido acceso a la información para ser procesada. Sus clasificaciones son: L1, l2 y l3, siendo la l1 la más rápida pero menos espaciosa, la l2 que esta también dentro de los microprocesadores como la l1, y la l3 que se encuentra cerca pero no dentro como las l1 y l2 de los microprocesadores, siendo la más espaciosa pero la más lenta comparada con las l1 y l2. Este tipo de memoria no es esencia, pero si se tiene aumenta el rendimiento del computador de forma significativa.
+
+    \vspace{1cm}
+        \begin{align}
+        
+        \LARGE
+        Gestión de la memoria:
+        
+        \end{align}
+    \vspace{0.5cm}
+La información en un computador circula en forma de pulsos (bits) a través de pistas o circuitos de cobre impresos en la tarjeta madre, esto es importante aclararlo ya que para realizar un proceso de escritura se guardan estos pulsos en espacios internos de forma matricial. Para realizar el proceso de lectura se activa un detector de cargas eléctricas que chequea la columna que tiene la celda que se quiere leer y determina si está cargada (1) o esta vacía (0).
+
+    \vspace{0.3cm}
+    
+Lo siguiente en aclarar es que el recorrido de la información a través de las memorias comienza en el disco duro, que es el que tiene almacenados todos los programas, incluido el sistema operativo. Al encender el computador y después de haber comprobado la existencia del hardware necesario, empieza el proceso de transferencia de programas del disco duro a la memoria RAM, de esta al CPU y después de vuelta. Hasta que el sistema operativo este completamente cargado y operativo. A partir de este punto el usuario a través de sus órdenes genera nuevas instrucciones para las cuales se vuelve a activar el ciclo entre memorias y CPU.
+
+\vspace{3cm}
+        \begin{align}
+        
+        \LARGE
+        Rapidez de las memorias:
+        
+        \end{align}
+    \vspace{0.5cm}
+La rapidez de cualquier memoria depende varios aspectos como su arquitectura, su capacidad de leer y escribir, su conectividad en la placa madre, entre otras, Cada configuración de los anteriores aspectos genera un tiempo de latencia; que es el tiempo en el cual la información recorre el ciclo memoria-CPU que generalmente se mide en nanosegundos. La rapidez en las memorias es importante, ya que de esto deriva la velocidad de respuesta del computador en general.
+
+\section{Conclusión} \label{conclulsion}
+La memoria es un componente fundamental para cualquier tipo de computador, y es necesario antes de adquirir un computador, crear hardware o software, tomar en cuenta las necesidades que se tienen en términos de memoria para tener un sistema eficiente.
+
+\cite{Profesor}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
