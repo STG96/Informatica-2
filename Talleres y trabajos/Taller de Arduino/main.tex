@@ -17,7 +17,7 @@
         
         \vspace{0.5cm}
         \LARGE
-        Taller
+        Consulta
             
         \vspace{1.5cm}
             
@@ -28,7 +28,7 @@
         \vspace{0.8cm}
             
         \Large
-        Despartamento de Ingeniería Electrónica y Telecomunicaciones\\
+        Departamento de Ingeniería Electrónica y Telecomunicaciones\\
         Universidad de Antioquia\\
         Medellín\\
         Septiembre de 2020
@@ -39,53 +39,71 @@
 \tableofcontents
 
 \section{Sección introductoria}
-Arduino es Hardware micro controlador de pulsos  Electricos de muchas funciones en la electronica y la robotica, personalmente desconosco casi todas sus funciones, y en este trabajo expondre una de ellas; que es imprimir texto en una pantalla LCD.
+Arduino es Hardware micro controlador de pulsos Eléctricos de muchas funciones en la electrónica y la robótica, personalmente desconozco casi todas sus funciones, y en este trabajo expondré una de ellas; que es imprimir texto en una pantalla LCD. Para este trabajo modifique un ejemplo de un trabajo ya creado.\cite{webpage}
 
 \section{Sección de contenido} \label{contenido}
 
-Esta sección es para ver qué pasa con los comandos 
-que definen texto
+\vspace{0,5cm}
+        \begin{align}
 
-El paquete también agrega un comportamiento especial 
-a <<estas marcas para hacer citas textuales>> tal como 
-lo indican las reglas de la RAE. \cite{dirac}
+        \LARGE
+        Para su construcción física:
+        
+        \end{align}
+\vspace{0,2cm}
+
+Para su construcción es necesario tener los componentes adecuados que listare a continuación y además saberlos instalar también es fundamental para que funcione correctamente.\\
+\\ Los componentes necesarios son: \\
+-Arduino uno R3\\
+-Protoboard\\
+-LCD 16x2\\
+-Potenciómetro\\
+-Resistencia 220 ohm\\
+-Cables de conexión\\
+
+\vspace{0,5cm}
+        \begin{align}
+
+        \LARGE
+        Consideraciones en el desarrollo del software:
+        
+        \end{align}
+\vspace{0,2cm}
+
+Para el desarrollo del código se necesitan conocimientos básicos del lenguaje c++ y el lenguaje del microcontrolador.\\
+A continuación, mostrare y explicare las partes del código:
+
+\vspace{2cm}
 
 \begin{lstlisting}
-#include <stdio.h>
-#define N 10
-/* Block
- * comment */
+// llama la libreria liquidcrystal.
+#include <LiquidCrystal.h>
 
-int main()
+// Inicializa la libreria con los numeros de los pines de la interfaz.
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+void setup() 
 {
-    int i;
-
-    // Line comment.
-    puts("Hello world!");
-    
-    for (i = 0; i < N; i++)
-    {
-        puts("LaTeX is also great for programmers!");
-    }
-
-    return 0;
+  // configura el numero de columnas y filas de la LCD:
+  lcd.begin(16, 2);
+  // Muestra el mensaje en la LCD.
+  lcd.print("Santiago");
 }
+
+void loop() {}
 \end{lstlisting}
 
-A continuación se presenta el logo de C++ Figura (\ref{fig:cpplogo})
-
-\begin{figure}[h]
-\includegraphics[width=4cm]{cpplogo.png}
-\centering
-\caption{Logo de C++}
-\label{fig:cpplogo}
-\end{figure}
-
-En la sección de teoremas (\ref{contenido})
 
 \section{Conclusión} \label{conclulsion}
+Una de las múltiples funciones de c++ en combinación con Arduino es mostrar texto en una pantalla LCD.\\
+Por último, muestro una imagen del resultado del proceso.
 
+\begin{figure}[h]
+\includegraphics[width=12cm]{Captura.PNG}
+\centering
+\caption{Imagen del trabajo} \cite{webpage}
+\label{fig:cpplogo}
+\end{figure}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
-
 \end{document}
